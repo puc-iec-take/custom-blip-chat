@@ -2,9 +2,10 @@ import React,{useState,useEffect} from 'react';
 import { BlipChat } from "blip-chat-widget";
 
 const Blip = () =>{
-
+  
   let blipClient = new BlipChat()
-  let tempKey = "cm9iaW46ZjhjZDMxNmEtZTg5Ni00ZDE2LWFmODMtMjg4N2NiNGMxYjQy"
+  let tempKey = ""
+  // let tempKey = "cm9iaW46ZjhjZDMxNmEtZTg5Ni00ZDE2LWFmODMtMjg4N2NiNGMxYjQy"
   
   const [key,setKey] = useState(tempKey);
 
