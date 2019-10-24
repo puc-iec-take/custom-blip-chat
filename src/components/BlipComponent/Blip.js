@@ -1,15 +1,17 @@
 import React,{useState,useEffect} from 'react';
 import { BlipChat } from "blip-chat-widget";
+import {useSelector,useDispatch} from 'react-redux'
 
-const Blip = () =>{
+const Blip = (props) =>{
   
   let blipClient = new BlipChat()
-  let tempKey = ""
-  // let tempKey = "cm9iaW46ZjhjZDMxNmEtZTg5Ni00ZDE2LWFmODMtMjg4N2NiNGMxYjQy"
-  
-  const [key,setKey] = useState(tempKey);
+  const dispatch = useDispatch();
+  const isBuild = useSelector((state)=>state.build)
+  const key = useSelector((state)=>state.key)
+  const style = useSelector((state)=>state.styles)
 
   function start(){
+
     blipClient.build()
   }
 
@@ -17,35 +19,42 @@ const Blip = () =>{
     blipClient.toogleChat();
   }
 
-  function appKey(){
+  function appKey(key){
     blipClient.withAppKey(key)
   }
   
   function withStyle(){
-    blipClient.withCustomStyle(`.blip-chat-bot-status{ color:red }`)
+    blipClient.withCustomStyle(style)
   }
 
   function stop(){
     blipClient.destroy();
   }
-
-  function mudarChat(){
-    
-    appKey();
+  // FAZ A CONSTRUÇÃO BÁSICA DO CHAT
+  function build(){
+    console.log("build")
+    appKey(key)
+    withStyle()
     start()
-
   }
+  //FAZ A RECONSTRUÇÃO DO CHAT
+  function rebuild(){
+    console.log("rebuild")
+      stop()
+      
+      // withStyle()
+      // appKey(key)
+      // start()
 
-  function teste(){
-    setKey("cm9iaW46ZjhjZDMxNmEtZTg5Ni00ZDE2LWFmODMtMjg4N2NiNGMxYjQy");
+    
   }
 
   return(
-    
-    <>
-      {
-        mudarChat()
-      }
+    // cm9iaW46ZjhjZDMxNmEtZTg5Ni00ZDE2LWFmODMtMjg4N2NiNGMxYjQy
+    <> 
+      <button onClick={()=>build()}>build</button>
+      <button  onClick={()=>rebuild()}>rebuild</button>
+      
     </>
   )
 }
