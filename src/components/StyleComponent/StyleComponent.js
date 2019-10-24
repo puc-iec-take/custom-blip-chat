@@ -9,11 +9,7 @@ const StyleComponent = () =>{
      */
     function fazer(){
 
-        
-        dispatch({type:'ADD_STYLE',style:'.blip-chat-bot-status{ color: red; }'})
-        dispatch({type:'BUILD',estado:'1'})
-        
-
+        dispatch({type:'ADD_STYLE',style:'.blip-chat-bot-name{ color: red; }.blip-chat-bot-status{ color: red; }'})
     }
 
     return(

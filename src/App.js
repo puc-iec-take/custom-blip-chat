@@ -9,16 +9,13 @@ function App() {
 
   const key = useSelector((store)=>store.key)
   const styles = useSelector((store)=>store.styles)
-  const build = useSelector((store)=>store.build) 
 
   return (
     <> 
-      O Blip chat {build?" foi ":" não foi "} iniciado
       {/* CASO EXISTA UMA APPKEY O BLIP É CHAMADO */}
       {
-        key?<Blip chave={key} style={styles}/>:""
+        key?<Blip/>:""
       }
-      {console.log(1)}
       <AppKey/>
       <StyleComponent/>
       <ApplicationRoutes />

@@ -5,13 +5,10 @@ import {useSelector,useDispatch} from 'react-redux'
 const Blip = (props) =>{
   
   let blipClient = new BlipChat()
-  const dispatch = useDispatch();
-  const isBuild = useSelector((state)=>state.build)
   const key = useSelector((state)=>state.key)
   const style = useSelector((state)=>state.styles)
 
   function start(){
-
     blipClient.build()
   }
 

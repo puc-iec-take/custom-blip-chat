@@ -4,7 +4,6 @@ import {useDispatch,useSelector} from 'react-redux'
 const AppKey = () =>{
     
     const dispatch = useDispatch();
-    const key = useSelector(state => state.key);
 
     /**
      * FAZ O ENVIO DA CHAVE PARA O STORE
