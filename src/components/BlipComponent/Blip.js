@@ -33,12 +33,11 @@ const Blip = (props) =>{
     appKey(key)
     withStyle()
     start()
+    toogle()
   }
   //FAZ A RECONSTRUÇÃO DO CHAT
   function rebuild(){
-    console.log("rebuild")
-      stop()
-      
+  
       // withStyle()
       // appKey(key)
       // start()
@@ -49,8 +48,9 @@ const Blip = (props) =>{
   return(
     // cm9iaW46ZjhjZDMxNmEtZTg5Ni00ZDE2LWFmODMtMjg4N2NiNGMxYjQy
     <> 
+    {console.log(blipClient)}
       <button onClick={()=>build()}>build</button>
-      <button  onClick={()=>rebuild()}>rebuild</button>
+      <button  onClick={()=>stop()}>stop</button>
       
     </>
   )

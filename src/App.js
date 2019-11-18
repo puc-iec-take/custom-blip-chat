@@ -3,7 +3,7 @@ import Blip from './components/BlipComponent/Blip'
 import AppKey from './components/KeyComponent/AppKey';
 import {ApplicationRoutes} from './ApplicationRoutes'
 import {useSelector} from 'react-redux'
-import StyleComponent from './components/StyleComponent/StyleComponent';
+import Nav from './components/Nav/Nav';
 
 function App() {
 
@@ -12,12 +12,12 @@ function App() {
 
   return (
     <> 
+    <AppKey/>
       {/* CASO EXISTA UMA APPKEY O BLIP É CHAMADO */}
       {
         key?<Blip/>:""
       }
-      <AppKey/>
-      <StyleComponent/>
+      <Nav/>
       <ApplicationRoutes />
     </>
   );
