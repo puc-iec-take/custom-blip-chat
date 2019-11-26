@@ -1,26 +1,33 @@
 {
-  "short_name": "Blip Custom",
-  "name": "Customizador Blip Chat",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": "./index.html",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "name": "Hello World",
+  "short_name": "Hello",
+  "icons": [{
+    "src": "/images/img128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    }, {
+      "src": "/images/img144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }, {
+      "src": "/images/img152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    }, {
+      "src": "/images/img192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }, {
+      "src": "/images/img256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }, {
+      "src": "/images/img512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }],    
+"start_url": "/index.html",
+"display": "standalone",
+"background_color": "#3E4EB8",
+"theme_color": "#2F3BA2"
 }
-

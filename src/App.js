@@ -12,6 +12,7 @@ function App() {
 
   return (
     <> 
+    <h1>Customização Blip Chat</h1>
     <AppKey/>
       {/* CASO EXISTA UMA APPKEY O BLIP É CHAMADO */}
       {

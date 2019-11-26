@@ -15,6 +15,7 @@ const AppKey = () =>{
 
     return(
         <>
+            <label for="appKey">Sua Key</label>
             <input onBlur={()=>sendKey()} type="text" id="appKey" placeholder="ENTRE COM SUA APP KEY"/>
         </>
     )
